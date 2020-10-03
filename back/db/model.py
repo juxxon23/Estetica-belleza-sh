@@ -104,4 +104,3 @@ class Schedule(db.Model):
         self.id_sc = id_sc
         self.entry_time = entry_time
         self.departure_time = departure_time
-

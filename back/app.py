@@ -3,10 +3,7 @@ from flask import Flask
 from db.model import db
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:pass123@localhost:5432/EsteticaTest"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:1234@localhost:5432/EsteticaTest"
+
+CORS(app, supports_credentials=True)
 db.init_app(app)
-#CORS(app, resources={r"/*": {"origins": "*"}})
-
-
-if __name__ == "__main___":
-    app.run(port=5000, debug=True)
